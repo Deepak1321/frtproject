@@ -24,7 +24,18 @@ class Candidate(models.Model):
     address= models.CharField(max_length=150)
     dob= models.CharField(max_length=50)
     gender= models.CharField(max_length=50)
+    min_salary=models.BigIntegerField(default=0)
+    max_salary= models.BigIntegerField(default=0)
+    job_type = models.CharField(max_length=150,default="")
+    jobcategory = models.CharField(max_length=150,default="")
+    country = models.CharField(max_length=150,default="")
+    highestedu = models.CharField(max_length=150,default="")
+    exprience = models.CharField(max_length=150,default="")
+    website = models.CharField(max_length=150,default="")
+    shift = models.CharField(max_length=150,default="")
+    jobdescription= models.CharField(max_length=500,default="")
     profile_pic= models.ImageField(upload_to="app/img/candidate")
+   
 
 
 
